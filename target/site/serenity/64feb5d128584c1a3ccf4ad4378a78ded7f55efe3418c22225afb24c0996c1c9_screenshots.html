@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="585cfa77bfb05c7d03f22f20470c63fa844069c382a94ce7e50b964f77aa54c1.html">Automatizar Floristeria Mundoflor</a></span>
+                > <span class="truncate-60"><a
+                    href="64feb5d128584c1a3ccf4ad4378a78ded7f55efe3418c22225afb24c0996c1c9.html">Agregar Producto Al Carrito </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-12-2024 18:25</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Automatizar Floristeria Mundoflor </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="d2c7b864ff1c740c4e5a488223b3b728da26d4492d7c7e10add3d7a85178917e.html">Agregar Carrito
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Agregar Producto Al Carrito
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado Que me encuentro en la pagina '&lt;url&gt;'<br>Cuando busco el producto '&lt;producto&gt;'<br>Entonces Agregare el producto en el carrito<br>Entonces Visualizare '&lt;producto&gt;' en el carrito</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Invalid argument exception: invalid argument</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>org.openqa.selenium.InvalidArgumentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.co.sanangel.stepDefinitions.AgregarProductoStepDefinitions.queMeEncuentroEnLaPagina(AgregarProductoStepDefinitions.java:33)<br />✽.Que me encuentro en la pagina ''(file:///D:/Documentos/Estudios%20CS/Formacion%20Personal/QA/ScreenPlay/TempleteScreenplay/src/test/resources/features/agregarProducto.feature:9)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource8240871033672030413.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="cb7825b027c024a6449741bb2fa7ee14f5fddf8ab0a5ea18894c1514f0ed64c8.png" title=" 1: Agregar Producto Al Carrito ({url=https://sanangel.com.co/, producto=versalles})" width="1920"/>
+                <img src="cb7825b027c024a6449741bb2fa7ee14f5fddf8ab0a5ea18894c1514f0ed64c8.png" title=" Dado Que me encuentro en la pagina 'https://sanangel.com.co/'" width="1920"/>
+                <img src="cb7825b027c024a6449741bb2fa7ee14f5fddf8ab0a5ea18894c1514f0ed64c8.png" title=" robot opens the browser at https://sanangel.com.co/" width="1920"/>
+                <img src="cb7825b027c024a6449741bb2fa7ee14f5fddf8ab0a5ea18894c1514f0ed64c8.png" title=" Dado Que me encuentro en la pagina 'https://sanangel.com.co/' (completed)" width="1920"/>
+                <img src="cb7825b027c024a6449741bb2fa7ee14f5fddf8ab0a5ea18894c1514f0ed64c8.png" title=" Cuando busco el producto 'versalles'" width="1920"/>
+                <img src="14a3a262a601eeb07f7d2ac16a4e43a11719f6120fcc7674b12b3842fce581dc.png" title=" robot clicks on boton abrir buscador" width="1920"/>
+                <img src="18619ba4cc65d16c801bd6257b7dc7559575b32f33d55f803e087b1949705468.png" title=" robot clicks on boton abrir buscador" width="1920"/>
+                <img src="ada30a905ee66a1b922426cf8630e413f56440de1870dde7655ec264b7058ee5.png" title=" robot clicks on boton abrir buscador (completed)" width="1920"/>
+                <img src="961988697715259410381a255a9ec587516e4a9632b612919ea67b2120273a66.png" title=" robot clicks on espacion escribir buscador" width="1920"/>
+                <img src="aa6574b8142c85bc80735557698027dc5f1649184698576db0c13a2d6680c216.png" title=" robot enters 'versalles' then hits [ENTER] into espacion escribir buscador" width="1920"/>
+                <img src="23f68c33599aa0a91130fc6168fc0ed133c71799ca6339b7f95c27a17e8bc255.png" title=" robot enters 'versalles' then hits [ENTER] into espacion escribir buscador (completed)" width="1920"/>
+                <img src="23f68c33599aa0a91130fc6168fc0ed133c71799ca6339b7f95c27a17e8bc255.png" title=" Cuando busco el producto 'versalles' (completed)" width="1920"/>
+                <img src="23f68c33599aa0a91130fc6168fc0ed133c71799ca6339b7f95c27a17e8bc255.png" title=" Entonces Agregare el producto en el carrito" width="1920"/>
+                <img src="23f68c33599aa0a91130fc6168fc0ed133c71799ca6339b7f95c27a17e8bc255.png" title=" Robot agregar productos task" width="1920"/>
+                <img src="23f68c33599aa0a91130fc6168fc0ed133c71799ca6339b7f95c27a17e8bc255.png" title=" robot clicks on boton anadir chocolate" width="1920"/>
+                <img src="48aeae48f1c377addb615ac2b752f31d549d56da1c5a85ea1c7f1fc2a9d227b7.png" title=" robot clicks on boton anadir chocolate" width="1920"/>
+                <img src="ba497649e3f9aac67e5d80a97d651308dc1181c6fae270ea64f655076eeec34f.png" title=" robot clicks on boton anadir chocolate (completed)" width="1920"/>
+                <img src="ba497649e3f9aac67e5d80a97d651308dc1181c6fae270ea64f655076eeec34f.png" title=" robot clicks on Boton agregar al carrito" width="1920"/>
+                <img src="e498ca0fa3bb51d68d11b0c0e7eb53e8756fd8a0c151322cfe94d9dad09bebf1.png" title=" robot clicks on Boton agregar al carrito" width="1920"/>
+                <img src="b7cdad241922c123762fd2268aefe64e03ed2d0a14edd7cab7810841ae29174e.png" title=" robot clicks on Boton agregar al carrito (completed)" width="1920"/>
+                <img src="b7cdad241922c123762fd2268aefe64e03ed2d0a14edd7cab7810841ae29174e.png" title=" Robot agregar productos task (completed)" width="1920"/>
+                <img src="b7cdad241922c123762fd2268aefe64e03ed2d0a14edd7cab7810841ae29174e.png" title=" Entonces Agregare el producto en el carrito (completed)" width="1920"/>
+                <img src="b7cdad241922c123762fd2268aefe64e03ed2d0a14edd7cab7810841ae29174e.png" title=" Entonces Visualizare 'versalles' en el carrito" width="1920"/>
+                <img src="b7cdad241922c123762fd2268aefe64e03ed2d0a14edd7cab7810841ae29174e.png" title=" Then validar nombre producto" width="1920"/>
+                <img src="b7cdad241922c123762fd2268aefe64e03ed2d0a14edd7cab7810841ae29174e.png" title=" 1: Agregar Producto Al Carrito ({url=https://sanangel.com.co/, producto=versalles}) (completed)" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" 2: Agregar Producto Al Carrito ({url=https://sanangel.com.co/, producto=&Eacute;vora 24 rosas})" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" Dado Que me encuentro en la pagina 'https://sanangel.com.co/'" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" robot opens the browser at https://sanangel.com.co/" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" Dado Que me encuentro en la pagina 'https://sanangel.com.co/' (completed)" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" Cuando busco el producto '&Eacute;vora 24 rosas'" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" robot clicks on boton abrir buscador" width="1920"/>
+                <img src="6c70abc0cdbef3c1b5b0331c5b14b3c59ade84c7d033c31580da03836269c76e.png" title=" robot clicks on boton abrir buscador" width="1920"/>
+                <img src="d86f046779a4528acff3d48aee307a2ab234f505a260c8b2f3b0d4c291483223.png" title=" robot clicks on boton abrir buscador (completed)" width="1920"/>
+                <img src="d86f046779a4528acff3d48aee307a2ab234f505a260c8b2f3b0d4c291483223.png" title=" robot clicks on espacion escribir buscador" width="1920"/>
+                <img src="3cd1e1209333c8e2390298516772a796b695507e4f1464e8ae7ac9d9326b7f0a.png" title=" robot clicks on espacion escribir buscador" width="1920"/>
+                <img src="eec5f60e41d4040603f15dc9dfcfe9868486b4041a1441be0ab94b7dc8345b14.png" title=" robot clicks on espacion escribir buscador (completed)" width="1920"/>
+                <img src="eec5f60e41d4040603f15dc9dfcfe9868486b4041a1441be0ab94b7dc8345b14.png" title=" robot enters '&Eacute;vora 24 rosas' then hits [ENTER] into espacion escribir buscador" width="1920"/>
+                <img src="f7811b14553204f16eac1045802736408521cd058769ce8730adf55bcd7b69bf.png" title=" robot enters '&Eacute;vora 24 rosas' then hits [ENTER] into espacion escribir buscador (completed)" width="1920"/>
+                <img src="f7811b14553204f16eac1045802736408521cd058769ce8730adf55bcd7b69bf.png" title=" Cuando busco el producto '&Eacute;vora 24 rosas' (completed)" width="1920"/>
+                <img src="f7811b14553204f16eac1045802736408521cd058769ce8730adf55bcd7b69bf.png" title=" Entonces Agregare el producto en el carrito" width="1920"/>
+                <img src="f7811b14553204f16eac1045802736408521cd058769ce8730adf55bcd7b69bf.png" title=" Robot agregar productos task" width="1920"/>
+                <img src="f7811b14553204f16eac1045802736408521cd058769ce8730adf55bcd7b69bf.png" title=" robot clicks on boton anadir chocolate" width="1920"/>
+                <img src="843b97ed9107b5887d8994a2d2c7203a925370e77a5ccb19b2cf8be593c788c7.png" title=" robot clicks on boton anadir chocolate" width="1920"/>
+                <img src="12357bf77fc09a88f389548262150b21beafd0db58c4fdbdc2b6dfc39378c7c8.png" title=" robot clicks on boton anadir chocolate (completed)" width="1920"/>
+                <img src="12357bf77fc09a88f389548262150b21beafd0db58c4fdbdc2b6dfc39378c7c8.png" title=" robot clicks on Boton agregar al carrito" width="1920"/>
+                <img src="22d62cdeee58136fcdab89afcda8b4de88cc7843155eab4dd313ae82922c340d.png" title=" robot clicks on Boton agregar al carrito" width="1920"/>
+                <img src="8a6072770411351161e1696e9e689b5ad1f9058372a94caab836e2b4fdda1836.png" title=" robot clicks on Boton agregar al carrito (completed)" width="1920"/>
+                <img src="8a6072770411351161e1696e9e689b5ad1f9058372a94caab836e2b4fdda1836.png" title=" Robot agregar productos task (completed)" width="1920"/>
+                <img src="8a6072770411351161e1696e9e689b5ad1f9058372a94caab836e2b4fdda1836.png" title=" Entonces Agregare el producto en el carrito (completed)" width="1920"/>
+                <img src="8a6072770411351161e1696e9e689b5ad1f9058372a94caab836e2b4fdda1836.png" title=" Entonces Visualizare '&Eacute;vora 24 rosas' en el carrito" width="1920"/>
+                <img src="8a6072770411351161e1696e9e689b5ad1f9058372a94caab836e2b4fdda1836.png" title=" Then validar nombre producto" width="1920"/>
+                <img src="29b814d864bf3f92975cf564490f7cea05c966e44b12948987e5f58b4056feeb.png" title=" Then validar nombre producto (completed)" width="1920"/>
+                <img src="29b814d864bf3f92975cf564490f7cea05c966e44b12948987e5f58b4056feeb.png" title=" Entonces Visualizare '&Eacute;vora 24 rosas' en el carrito (completed)" width="1920"/>
+                <img src="29b814d864bf3f92975cf564490f7cea05c966e44b12948987e5f58b4056feeb.png" title=" 2: Agregar Producto Al Carrito ({url=https://sanangel.com.co/, producto=&Eacute;vora 24 rosas}) (completed)" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" 3: Agregar Producto Al Carrito ({url=https://sanangel.com.co/, producto=baldado de amor})" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" Dado Que me encuentro en la pagina 'https://sanangel.com.co/'" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" robot opens the browser at https://sanangel.com.co/" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" Dado Que me encuentro en la pagina 'https://sanangel.com.co/' (completed)" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" Cuando busco el producto 'baldado de amor'" width="1920"/>
+                <img src="c835c3bc3cd8db27b583c754ce878126aecc074cd310147862092beb5e4d9f14.png" title=" robot clicks on boton abrir buscador" width="1920"/>
+                <img src="6c70abc0cdbef3c1b5b0331c5b14b3c59ade84c7d033c31580da03836269c76e.png" title=" robot clicks on boton abrir buscador" width="1920"/>
+                <img src="d86f046779a4528acff3d48aee307a2ab234f505a260c8b2f3b0d4c291483223.png" title=" robot clicks on boton abrir buscador (completed)" width="1920"/>
+                <img src="d86f046779a4528acff3d48aee307a2ab234f505a260c8b2f3b0d4c291483223.png" title=" robot clicks on espacion escribir buscador" width="1920"/>
+                <img src="6c70abc0cdbef3c1b5b0331c5b14b3c59ade84c7d033c31580da03836269c76e.png" title=" robot clicks on espacion escribir buscador" width="1920"/>
+                <img src="3b7f9444b649360257e4c97d51c725fa8a7fa72a9c6689d88052183fc625bd22.png" title=" robot clicks on espacion escribir buscador (completed)" width="1920"/>
+                <img src="3b7f9444b649360257e4c97d51c725fa8a7fa72a9c6689d88052183fc625bd22.png" title=" robot enters 'baldado de amor' then hits [ENTER] into espacion escribir buscador" width="1920"/>
+                <img src="02f711efc06fa3f81898ab6866e1bf496a248abb4431a80dd21b676a31645892.png" title=" robot enters 'baldado de amor' then hits [ENTER] into espacion escribir buscador (completed)" width="1920"/>
+                <img src="02f711efc06fa3f81898ab6866e1bf496a248abb4431a80dd21b676a31645892.png" title=" Cuando busco el producto 'baldado de amor' (completed)" width="1920"/>
+                <img src="ef0d79aecc107f3e4695cf4dba6dcf4f713958cd4f922261d04b0bb52fa53d28.png" title=" Entonces Agregare el producto en el carrito" width="1920"/>
+                <img src="fbe900fedf1fe3bdd88ab441435bc1e43ce8d461551644a6e2c5afb80e2ee0da.png" title=" Robot agregar productos task" width="1920"/>
+                <img src="fbe900fedf1fe3bdd88ab441435bc1e43ce8d461551644a6e2c5afb80e2ee0da.png" title=" robot clicks on boton anadir chocolate" width="1920"/>
+                <img src="0863b208dc91133b3fc3a34080bfaeeee6939dc4537433e39cd0af4533897ab6.png" title=" robot clicks on boton anadir chocolate" width="1920"/>
+                <img src="52ba91e2d6643738572fa9ef5de4ab782a20a43338dc8958a861199c6d06157c.png" title=" robot clicks on boton anadir chocolate (completed)" width="1920"/>
+                <img src="52ba91e2d6643738572fa9ef5de4ab782a20a43338dc8958a861199c6d06157c.png" title=" robot clicks on Boton agregar al carrito" width="1920"/>
+                <img src="72ec31dd2020a2cbc75834fa299f3943bd7dfafb9ca9c7da798908bb5df96369.png" title=" robot clicks on Boton agregar al carrito" width="1920"/>
+                <img src="304d6f127b8207fe3aa355dfb5d65440995b695d1a3790d8c59f28954e56f9dc.png" title=" robot clicks on Boton agregar al carrito (completed)" width="1920"/>
+                <img src="304d6f127b8207fe3aa355dfb5d65440995b695d1a3790d8c59f28954e56f9dc.png" title=" Robot agregar productos task (completed)" width="1920"/>
+                <img src="304d6f127b8207fe3aa355dfb5d65440995b695d1a3790d8c59f28954e56f9dc.png" title=" Entonces Agregare el producto en el carrito (completed)" width="1920"/>
+                <img src="304d6f127b8207fe3aa355dfb5d65440995b695d1a3790d8c59f28954e56f9dc.png" title=" Entonces Visualizare 'baldado de amor' en el carrito" width="1920"/>
+                <img src="304d6f127b8207fe3aa355dfb5d65440995b695d1a3790d8c59f28954e56f9dc.png" title=" Then validar nombre producto" width="1920"/>
+                <img src="304d6f127b8207fe3aa355dfb5d65440995b695d1a3790d8c59f28954e56f9dc.png" title=" 3: Agregar Producto Al Carrito ({url=https://sanangel.com.co/, producto=baldado de amor}) (completed)" width="1920"/>
+                <img src="c1c90f480d76c8ae8b23b16871c1f4a51139b435b71233c4d0b54a55ee2a5cbd.png" title=" 4: Agregar Producto Al Carrito ({url=, producto=})" width="1920"/>
+                <img src="c1c90f480d76c8ae8b23b16871c1f4a51139b435b71233c4d0b54a55ee2a5cbd.png" title=" Dado Que me encuentro en la pagina ''" width="1920"/>
+                <img src="c1c90f480d76c8ae8b23b16871c1f4a51139b435b71233c4d0b54a55ee2a5cbd.png" title=" robot opens the browser at : <span class='error-color'>ERROR</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
